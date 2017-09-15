@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="fileupload"
+			value="/WEB-INF/tiles/template/defaultImport.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="table" value="/WEB-INF/jsp/table.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+	</definition>
+
+	<!-- Import page -->
+	<definition name="import" extends="base-definition">
+		<put-attribute name="title" value="import" />
+		<put-attribute name="body" value="/WEB-INF/jsp/importMessage.jsp" />
+	</definition>
+
+	<!-- Sample systems page -->
+	<definition name="sample" extends="base-definition">
+		<put-attribute name="title" value="sample" />
+		<put-attribute name="body" value="/WEB-INF/jsp/system/addSys.jsp" />
+	</definition>
+
+	<!-- Sample contracts page -->
+	<definition name="sampleContract" extends="base-definition">
+		<put-attribute name="title" value="sampleContract" />
+		<put-attribute name="body" value="/WEB-INF/jsp/system/addCont.jsp" />
+	</definition>
+
+	<!-- Edit page -->
+	<definition name="edit" extends="base-definition">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="fileupload" value="/WEB-INF/jsp/editForm.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/table.jsp" />
+		<put-attribute name="table" value="/WEB-INF/jsp/update.jsp" />
+	</definition>
+	
+		<!-- Update page -->
+	<definition name="update" extends="base-definition">
+		<put-attribute name="title" value="edit" />
+		<put-attribute name="fileupload" value="/WEB-INF/jsp/editForm.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/table.jsp" />
+		<put-attribute name="table" value="/WEB-INF/jsp/update.jsp" />
+	</definition>
+
+	<!-- Error page -->
+	<definition name="error" extends="base-definition">
+		<put-attribute name="title" value="error" />
+		<put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+	</definition>
+</tiles-definitions>
