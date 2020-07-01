@@ -12,5 +12,4 @@ public class SpringAppApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
